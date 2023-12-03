@@ -6,16 +6,13 @@ curl -b session=$AOC_SESSION https://adventofcode.com/2023/day/$1/input > $1/inp
 curl -b session=$AOC_SESSION https://adventofcode.com/2023/day/$1 | htmlq -t code > $1/test
 
 cat > $1/foo.q <<- EOM
-input:"c" $ read1 \`:input
-test:"c" $ read1 \`:test
-
-input:test
-
+i:"c" $ read0 \`:input
+t:"c" $ read0 \`:test
+i:t
 /=========================================
-
-
+p1:0
+p2:0
 /=========================================
-
 show 20#"="
 show "part1"
 show p1
