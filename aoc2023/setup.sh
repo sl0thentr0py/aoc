@@ -3,7 +3,7 @@
 source .env
 mkdir $1
 curl -b session=$AOC_SESSION https://adventofcode.com/2023/day/$1/input > $1/input
-curl -b session=$AOC_SESSION https://adventofcode.com/2023/day/1 | htmlq -t code > $1/test
+curl -b session=$AOC_SESSION https://adventofcode.com/2023/day/$1 | htmlq -t code > $1/test
 
 cat > $1/foo.q <<- EOM
 input:"c" $ read1 \`:input
